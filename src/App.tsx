@@ -3,7 +3,7 @@ import "./App.css";
 import MainPage from "./pages/MainPage/MainPage";
 
 function App() {
-  const routes = [{ path: "/", element: <MainPage /> }];
+  const routes = [{ path: "/weather/", element: <MainPage /> }];
 
   const router = createBrowserRouter(routes);
 
