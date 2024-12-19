@@ -32,6 +32,9 @@ export default function ChooseCityBlock({
       <Button onClick={() => setCity("Dubai")} active={city === "Dubai"}>
         Dubai
       </Button>
+      <Button onClick={() => setCity("Tbilisi")} active={city === "Tbilisi"}>
+        Tbilisi
+      </Button>
     </div>
   );
 }
