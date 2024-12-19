@@ -1,0 +1,23 @@
+.container {
+  background-color: #6beac71a;
+  width: 90%;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 20px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  text-align: center;
+}
+
+.container.active {
+  background-color: #6beac7cc;
+}
+
+@media screen and (max-width: 530px) {
+  .container {
+    font-size: 15px;
+  }
+}

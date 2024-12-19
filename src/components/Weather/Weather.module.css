@@ -1,0 +1,45 @@
+.container {
+  padding: 5px;
+  width: 75%;
+  background-color: #48c7f4;
+  font-size: 20px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+}
+
+.cityName {
+  margin-bottom: 50px;
+  font-size: 75px;
+  color: #0f3f31cc;
+}
+
+.dataContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  color: white;
+}
+
+.day {
+  color: #3a3f0fcc;
+  margin-bottom: 30px;
+  font-size: 50px;
+}
+
+.war {
+  color: #be101fcc;
+  margin-top: 30px;
+  font-size: 50px;
+}
