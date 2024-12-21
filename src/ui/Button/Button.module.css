@@ -1,23 +1,46 @@
 .container {
   background-color: #6beac71a;
+  /* Нету цветовой палитры */
   width: 90%;
+  /* Зачем указывать width 90%? */
   padding: 10px;
   border-radius: 20px;
   font-size: 20px;
   color: white;
+  /* Лучше всегда использовать hex */
   display: flex;
+  /* параметры display и position и все прилегающие к ним стили лучше выносить на самый вверх, ниже пример */
   justify-content: center;
   align-items: center;
   font-weight: 600;
   text-align: center;
 }
 
+/* Пример. Лучше группировать, flexbox с flexbox, шрифт с шрифтам, цвет с цветами и т.п */
+/* .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  color: white;
+  background-color: #6beac71a;
+} */
+
 .container.active {
   background-color: #6beac7cc;
+/* Нет темы */
 }
 
 @media screen and (max-width: 530px) {
   .container {
     font-size: 15px;
   }
+  /* Почитай про clamp() - https://developer.mozilla.org/ru/docs/Web/CSS/clamp, можно избавиться от @media */
+  /* Про брейкпоинты - https://media.contented.ru/glossary/breykpoint-breakpoint/, старайся @media писать по брейкпоинтам, 
+  если не получается - подумай еще как оптимизировать css */
 }

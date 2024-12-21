@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   border: 0;
-  box-shadow: none;
+  box-shadow: none; 
   outline: none;
+  /* Зачем отключать outline и box-shadow? */
 }
