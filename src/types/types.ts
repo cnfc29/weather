@@ -1,3 +1,5 @@
+// Нету Public API
+
 export interface CurrentWeather {
   interval: number;
   is_day: number;

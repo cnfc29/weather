@@ -1,6 +1,8 @@
 .container {
+  /* Группировки не хватает */
   padding: 5px;
   width: 75%;
+  /* Нет палитры цветов */
   background-color: #48c7f4;
   font-size: 20px;
   font-weight: 600;
@@ -20,6 +22,7 @@
 .cityName {
   margin-bottom: 50px;
   font-size: 75px;
+  /* Нет палитры цветов */
   color: #0f3f31cc;
 }
 
@@ -29,16 +32,19 @@
 }
 
 .title {
+  /* Используй hex */
   color: white;
 }
 
 .day {
+  /* Нет палитры цветов */
   color: #3a3f0fcc;
   margin-bottom: 30px;
   font-size: 50px;
 }
 
 .war {
+  /* Нет палитры цветов */
   color: #be101fcc;
   margin-top: 30px;
   font-size: 50px;
@@ -50,4 +56,5 @@
   .cityName {
     font-size: 40px;
   }
+  /* Прочитай про clamp() */
 }
