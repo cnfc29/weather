@@ -19,7 +19,6 @@ export default function MainPage(): JSX.Element {
           )}`
         );
         const geocodeData = await geocodeResponse.json();
-        console.log(geocodeData);
 
         if (geocodeData.results && geocodeData.results.length > 0) {
           const { latitude, longitude } = geocodeData.results[0];
@@ -29,7 +28,6 @@ export default function MainPage(): JSX.Element {
           );
 
           const weatherData = await weatherResponse.json();
-          console.log(weatherData);
 
           setWeather(weatherData.current_weather);
         }
@@ -41,14 +39,12 @@ export default function MainPage(): JSX.Element {
     };
 
     fetchCityWeather(city);
-    console.log(weather);
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    
   }, [city]);
 
   return (
     <div className={styles.container}>
-      <ChooseCityBlock city={city} setCity={setCity} />
+      <ChooseCityBlock onChange={(city) => setCity(city)} />
       <Weather weather={weather} loading={loading} city={city} />
     </div>
   );

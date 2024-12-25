@@ -1,27 +1,36 @@
+import { useState } from "react";
 import Button from "../../ui/Button/Button";
 import styles from "./ChooseCityBlock.module.css";
 
 interface ChooseCityBlockProps {
-  city: string;
-  setCity: (city: string) => void;
+  onChange: (city: string) => void;
 }
 export default function ChooseCityBlock({
-  city,
-  setCity,
+  onChange,
 }: ChooseCityBlockProps): JSX.Element {
+  const [city, setCity] = useState<string>("Moscow");
+
+  const changeHandler = (city: string) => {
+    setCity(city);
+    onChange(city);
+  };
+
   return (
     <div className={styles.container}>
-      <Button onClick={() => setCity("Moscow")} active={city === "Moscow"}>
+      <Button
+        onClick={() => changeHandler("Moscow")}
+        active={city === "Moscow"}
+      >
         Moscow
       </Button>
       <Button
-        onClick={() => setCity("Saint Petersburg")}
+        onClick={() => changeHandler("Saint Petersburg")}
         active={city === "Saint Petersburg"}
       >
         Saint Petersburg
       </Button>
       <Button
-        onClick={() => setCity("Novosibirsk")}
+        onClick={() => changeHandler("Novosibirsk")}
         active={city === "Novosibirsk"}
       >
         Novosibirsk
